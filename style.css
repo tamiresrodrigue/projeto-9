@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 120px;
+
+    & nav {
+        display: flex;
+        gap: 25px;
+
+        & a {
+            color: #141A26;
+            position: relative;
+        }
+
+        & a::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: #141A26;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .3s ease-in;
+        }
+
+        & a:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+main {
+
+    & section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    & #home {
+        background-color: #0D0D0D;
+        color: #fff;
+        height: calc(100vh - 53px);
+
+        & .container {
+            max-width: 825px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+
+            & a {
+                background-color: #141A26;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: bold;
+                padding: 10.5px 30px;
+            }
+        }
+    }
+
+    & #galeria {
+        background-color: #F8F9FA;
+
+        & .container {
+            max-width: 1098px;
+            margin: auto;
+
+            & .photos {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                & img {
+                    border-radius: 8px;
+                }
+            }
+
+            & h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+
+    }
+
+    & #depoimentos {
+
+        & .container {
+
+            & h2 {
+                text-align: center;
+                font-size: 34.92px;
+                margin-bottom: 40px;
+            }
+
+            & .cards {
+                display: flex;
+                gap: 30px;
+
+                & .card{
+                    max-width: 410px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 23px;
+                    align-items: center;
+                    text-align: center;
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 7%);
+                    padding: 30px;
+                    border-radius: 8px;
+
+                    & img{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100px;
+                    }
+
+                    & p:nth-of-type(1){
+                        font-style: italic;
+                    }
+                      & p:nth-of-type(2){
+                        font-weight: bold;
+                    }
+                }
+
+            }
+        }
+    }
+    & #contatos{
+        background-color: #F8F9FA;
+
+        & .container{
+            width: 580px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+
+            h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 34.79px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                & .form-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    & input{
+                        padding: 6px;
+                        border: #CCCCCC 1px solid;
+                        border-radius: 4px;
+                        outline: none;
+                    }
+
+                }
+
+                & #btn{
+                    background-color: #141A26;
+                    color: #fff;
+                    padding: 15px;
+                    border-radius: 4px;
+                    border: none;
+                    cursor: pointer;
+                }
+               #btn:hover{
+                background-color: #2980b9; 
+                transition: 0.3s;
+               }
+
+            }
+        }
+    }
+}
+
+footer{
+    align-items: center;
+    background-color: #1A1A26;
+    padding: 36px;
+    color: #fff;
+    text-align: center;
+}
